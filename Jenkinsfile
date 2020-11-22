@@ -8,7 +8,7 @@ pipeline {
        registry = 'deepanmurugan/shoppingapp-mens'
        registryCredential = 'dockerhub'
        dockerImage = ''
-       imageid = 'deepanmurugan/shoppingapp-mens'+':'+env.BUILD_NUMBER
+       imageid = "deepanmurugan/shoppingapp-mens:$BUILD_NUMBER"
    }
    stages {
        stage('Build') {
