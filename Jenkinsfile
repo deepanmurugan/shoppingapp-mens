@@ -28,7 +28,6 @@ pipeline {
                script {
 			dockerpush()
                    }
-               }
            }
        }
        stage('Pull Playbook Repo') {
