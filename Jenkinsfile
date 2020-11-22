@@ -12,8 +12,7 @@ pipeline {
    stages {
        stage('Build') {
             steps {
-		def dockerregisty = registry + ":$BUILD_NUMBER"
-		dockerImage = dockerbuild(dockerregisty)
+		dockerImage = dockerbuild(dockerregisty, $BUILD_NUMBER)
             } 
         }
        stage('Test') {
