@@ -26,7 +26,7 @@ pipeline {
        stage('Publish') {
            steps{
                script {
-			dockerpush()
+			dockerpush(dockerImage)
                    }
            }
        }
