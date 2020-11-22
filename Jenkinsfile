@@ -13,7 +13,7 @@ pipeline {
        stage('Build') {
             steps {
 		script {
-			dockerImage = dockerbuild(dockerregisty, $BUILD_NUMBER)
+			dockerImage = dockerbuild(registry, $BUILD_NUMBER)
             
 		}
 	    } 
