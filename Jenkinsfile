@@ -26,7 +26,7 @@ pipeline {
        stage('Publish') {
            steps{
                script {
-			dockerpush(dockerImage, registryCredential)
+			dockerpush(dockerImage)
                    }
            }
        }
