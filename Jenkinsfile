@@ -20,14 +20,13 @@ pipeline {
         }
        stage('Test') {
            steps {                
-               sh 'echo "Testing the docker built image"'
+		testcase()
            }
        }
        stage('Publish') {
            steps{
                script {
-                     docker.withRegistry( '', registryCredential ) {
-                        dockerImage.push()
+			dockerpush()
                    }
                }
            }
