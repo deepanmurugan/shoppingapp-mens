@@ -12,7 +12,9 @@ pipeline {
    stages {
        stage('Build') {
             steps {
-		dockerbuild.build(registry)
+		script {
+			dockerbuild.build(registry)
+		}
             } 
         }
        stage('Test') {
