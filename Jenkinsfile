@@ -12,10 +12,8 @@ pipeline {
    stages {
        stage('Build') {
             steps {
-		script {
-			def dockerregisty = registry + ":$BUILD_NUMBER"
-			dockerImage = dockerbuild.build(dockerregisty)
-		}
+		def dockerregisty = registry + ":$BUILD_NUMBER"
+		dockerImage = dockerbuild(dockerregisty)
             } 
         }
        stage('Test') {
