@@ -8,13 +8,12 @@ pipeline {
        registry = 'deepanmurugan/shoppingapp-mens'
        registryCredential = 'dockerhub'
        dockerImage = ''
-       buildno = $BUILD_NUMBER
    }
    stages {
        stage('Build') {
             steps {
 		script {
-			dockerImage = dockerbuild.build(registry, buildno)
+			dockerImage = dockerbuild.build(registry, $BUILD_NUMBER)
 		}
             } 
         }
