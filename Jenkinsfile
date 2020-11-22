@@ -36,7 +36,10 @@ pipeline {
         steps {
 		dir('/tmp/ansible-playbooks/') {
 		script {
-			gitcheckout.checkout([branch:'main',repoUrl:'https://github.com/deepanmurugan/Ansible_Playbook.git'])
+			gitcheckout(
+				branch: "main",
+				repoUrl: "https://github.com/deepanmurugan/Ansible_Playbook.git"
+			)
           	}
 		}
 	}
