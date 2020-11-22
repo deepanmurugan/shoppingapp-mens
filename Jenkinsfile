@@ -35,7 +35,7 @@ pipeline {
        stage('Pull Playbook Repo') {
         steps {
 		script {
-			gitcheckout(branch:'main',repoUrl:'https://github.com/deepanmurugan/Ansible_Playbook.git')
+			gitcheckout.checkout(branch:'main',repoUrl:'https://github.com/deepanmurugan/Ansible_Playbook.git')
           	}
 	}
        }
