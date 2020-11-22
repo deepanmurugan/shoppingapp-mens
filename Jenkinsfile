@@ -5,7 +5,6 @@ pipeline {
    environment {
        app = 'shoppingapp'
        service = 'shoppingapp-mens'
-       registry = 'deepanmurugan/shoppingapp-mens'
        registryCredential = 'dockerhub'
        dockerImage = ''
        imageid = "deepanmurugan/shoppingapp-mens:$BUILD_NUMBER"
@@ -15,7 +14,6 @@ pipeline {
             steps {
 		script {
 			dockerImage = dockerbuild(imageid)
-            
 		}
 	    } 
         }
