@@ -12,8 +12,11 @@ pipeline {
    stages {
        stage('Build') {
             steps {
-		dockerImage = dockerbuild(dockerregisty, $BUILD_NUMBER)
-            } 
+		script {
+			dockerImage = dockerbuild(dockerregisty, $BUILD_NUMBER)
+            
+		}
+	    } 
         }
        stage('Test') {
            steps {                
